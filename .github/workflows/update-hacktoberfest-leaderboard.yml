@@ -196,14 +196,20 @@ jobs:
             await updateIssue(leaderboardData);
           } else {
             console.log("No leaderboard data to update.");
-          const emptyIssueBody = `# 🏆 Hacktoberfest 2025 Goose Leaderboard 🏆\n` +
-            `Hello, lovely contributors! As Hacktoberfest 2025 and the crisp Fall breeze refreshes us, we wanted to make the contribution process extra fun. Check our live leaderboard below to see who our top contributors are this year in real-time. Not only does this recognize everyone's efforts, it also brings an amplified competitive vibe with each contribution.\n\n` +
-            `### 🌟 **Current Rankings:**\n\n` +
-            `| Rank | Contributor | Points | PRs | Biggest PR to Date |\n` +
-            `|------|-------------|--------|-----|--------------------|\n` +
-            `| | | | | |\n\n` +
-            `No qualifying PRs found at this time. Check back soon!\n\n` +
-            `Last updated: ${new Date().toUTCString()}`;
+            const emptyIssueBody = `# 🏆 Hacktoberfest 2025 Goose Leaderboard 🏆\n` +
+              `Hello, lovely contributors! As Hacktoberfest 2025 and the crisp Fall breeze refreshes us, we wanted to make the contribution process extra fun. Check our live leaderboard below to see who our top contributors are this year in real-time. Not only does this recognize everyone's efforts, it also brings an amplified competitive vibe with each contribution.\n\n` +
+              `### 🌟 **Current Rankings:**\n\n` +
+              `| Rank | Contributor | Points | PRs | Biggest PR to Date |\n` +
+              `|------|-------------|--------|-----|--------------------|\n` +
+              `| | | | | |\n\n` +
+              `No qualifying PRs found at this time. Check back soon!\n\n` +
+              `Last updated: ${new Date().toUTCString()}`;
+            
+            await github.rest.issues.update({
+              owner,
+              repo,
+              issue_number: issueNumber,
+              body: emptyIssueBody
+            });
             console.log("Updated issue with empty leaderboard message.");
           }
-}
