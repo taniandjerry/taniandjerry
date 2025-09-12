@@ -213,3 +213,4 @@ jobs:
             });
             console.log("Updated issue with empty leaderboard message.");
           }
+        }
