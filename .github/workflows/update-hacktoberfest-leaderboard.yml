@@ -152,7 +152,7 @@ Hello, lovely contributors! As Hacktoberfest 2025 and the crisp Fall breeze refr
 
 | Rank | Contributor | Points | PRs | Biggest PR to Date |
 |------|-------------|--------|-----|-------------------|
-${leaderboardData.map(entry => `| ${entry.rank} ${getRankEmoji(entry.rank)} | @${entry.username} | ${entry.points} | ${entry.prs} | ${entry.biggestPR} |`).join('\\n')}
+${leaderboardData.map(entry => '| ' + entry.rank + ' ' + getRankEmoji(entry.rank) + ' | @' + entry.username + ' | ' + entry.points + ' | ' + entry.prs + ' | ' + entry.biggestPR + ' |').join('\\n')}
 
 ### 📜 How It Works:
 The top 20 contributors will earn the first ever goose swag from the swag shop along with LLM credits! To earn your place in the leaderboard, we have created a points system that is explained below. As you complete a task by successfully merging a PR, you will automatically be granted a certain # of points.
