@@ -145,36 +145,49 @@ jobs:
               return '';
             };
 
-          const issueBody = '# 🏆 Hacktoberfest 2025 Goose Leaderboard 🏆\n' +
-'Hello, lovely contributors! As Hacktoberfest 2025 and the crisp Fall breeze refreshes us, we wanted to make the contribution process extra fun. Check our live leaderboard below to see who our top contributors are this year in real-time. Not only does this recognize everyone\'s efforts, it also brings an amplified competitive vibe with each contribution.\n\n' +
-'### 🌟 **Current Rankings:**\n\n' +
-'| Rank | Contributor | Points | PRs | Biggest PR to Date |\n' +
-'|------|-------------|--------|-----|-------------------|\n' +
-leaderboardData.map(entry => '| ' + entry.rank + ' ' + getRankEmoji(entry.rank) + ' | @' + entry.username + ' | ' + entry.points + ' | ' + entry.prs + ' | ' + entry.biggestPR + ' |').join('\n') + '\n\n' +
-'### 📜 How It Works:\n' +
-'The top 20 contributors will earn the first ever goose swag from the swag shop along with LLM credits! To earn your place in the leaderboard, we have created a points system that is explained below. As you complete a task by successfully merging a PR, you will automatically be granted a certain # of points.\n\n' +
-'#### 💯 Point System\n' +
-'| Weight | Points Awarded | Description |\n' +
-'|---------|-------------|-------------|\n' +
-'| 🐭 **Small** | 5 points | For smaller tasks that take limited time to complete and/or don\'t require any product knowledge. |\n' +
-'| 🐰 **Medium** | 10 points | For average tasks that take additional time to complete and/or require some product knowledge. |\n' +
-'| 🐂 **Large** | 15 points | For heavy tasks that takes lots of time to complete and/or possibly require deep product knowledge. |\n\n' +
-'#### 🎁 Rewards\n' +
-'- Made it to the **top 10**? Our Top 10 Contributors with the most points will be awarded gift cards to our brand new goose swag shop! Keep an eye on your progress to make sure you\'re one step ahead!\n\n' +
-'### FAQ\n' +
-'- **Frequency of Updates:** The leaderboard will be updated every hour.\n' +
-'- **Criteria:** Rankings are based on how many points you earn across all approved PRs in the goose repo. To ensure your PRs are successfully merged:\n' +
-'  - Ensure your contributions are aligned with our project\'s Code of Conduct.\n' +
-'  - Refer to the goose repo\'s Contributing Guide.\n' +
-'- **Tie-Breakers:** In the event of a tie in total points, the contributor with the highest value single contribution (large > medium > small) will be ranked higher.\n\n' +
-'### 🚀 Get Featured:\n' +
-'Want to see your name climbing our ranks?\n\n' +
-'Explore our issues with the labels `good-first-issue` , `no-code` and `hacktoberfest` in the goose repo\' Project Hub:\n\n' +
-'- **goose**\n' +
-'  - Hacktoberfest Project Hub\n' +
-'  - Contributing Guide\n\n' +
-'Excited to see everyone\'s hard work. Thank you so much for your invaluable contributions, and let the fun competition begin!\n\n' +
-'Last updated: ' + new Date().toUTCString();
+            const issueBody = `# 🏆 Hacktoberfest 2025 Goose Leaderboard 🏆
+Hello, lovely contributors! As Hacktoberfest 2025 and the crisp Fall breeze refreshes us, we wanted to make the contribution process extra fun. Check our live leaderboard below to see who our top contributors are this year in real-time. Not only does this recognize your efforts, it also brings an amplified competitive vibe with each contribution.
+
+### 🌟 **Current Rankings:**
+
+| Rank | Contributor | Points | PRs | Biggest PR to Date |
+|------|-------------|--------|-----|-------------------|
+${leaderboardData.map(entry => '| ' + entry.rank + ' ' + getRankEmoji(entry.rank) + ' | @' + entry.username + ' | ' + entry.points + ' | ' + entry.prs + ' | ' + entry.biggestPR + ' |').join('\\n')}
+
+### 📜 How It Works:
+The top 20 contributors will earn the first ever goose swag from the swag shop along with LLM credits! To earn your place in the leaderboard, we have created a points system that is explained below. As you complete a task by successfully merging a PR, you will automatically be granted a certain # of points.
+
+#### 💯 Point System
+| Weight | Points Awarded | Description |
+|---------|-------------|-------------|
+| 🐭 **Small** | 5 points | For smaller tasks that take limited time to complete and/or don't require any product knowledge. |
+| 🐰 **Medium** | 10 points | For average tasks that take additional time to complete and/or require some product knowledge. |
+| 🐂 **Large** | 15 points | For heavy tasks that takes lots of time to complete and/or possibly require deep product knowledge. |
+
+#### 🎁 Rewards
+- Made it to the **top 10**? Our Top 10 Contributors with the most points will be awarded gift cards to our brand new goose swag shop! Keep an eye on your progress to make sure you're one step ahead!
+
+### FAQ
+- **Frequency of Updates:** The leaderboard will be updated every hour.
+- **Criteria:** Rankings are based on how many points you earn across all approved PRs in the goose repo. To ensure your PRs are successfully merged:
+  - Ensure your contributions are aligned with our project's Code of Conduct.
+  - Refer to the goose repo's Contributing Guide.
+- **Tie-Breakers:** In the event of a tie in total points, the contributor with the highest value single contribution (large > medium > small) will be ranked higher.
+
+
+### 🚀 Get Featured:
+Want to see your name climbing our ranks?
+
+Explore our issues with the labels `good-first-issue` , `no-code` and `hacktoberfest` in the goose repo' Project Hub:  
+
+- **goose**
+  - Hacktoberfest Project Hub
+  - Contributing Guide
+
+
+Excited to see everyone's hard work. Thank you so much for your invaluable contributions, and let the fun competition begin! 
+
+Last updated: ${new Date().toUTCString()}
 `;
 
             try {
@@ -197,15 +210,18 @@ leaderboardData.map(entry => '| ' + entry.rank + ' ' + getRankEmoji(entry.rank) 
             await updateIssue(leaderboardData);
           } else {
             console.log("No leaderboard data to update.");
-            const emptyIssueBody = '# 🏆 Hacktoberfest 2025 Goose Leaderboard 🏆\n' +
-'Hello, lovely contributors! As Hacktoberfest 2025 and the crisp Fall breeze refreshes us, we wanted to make the contribution process extra fun. Check our live leaderboard below to see who our top contributors are this year in real-time. Not only does this recognize everyone\'s efforts, it also brings an amplified competitive vibe with each contribution.\n\n' +
-'### 🌟 **Current Rankings:**\n\n' +
-'| Rank | Contributor | Points | PRs | Biggest PR to Date |\n' +
-'|------|-------------|--------|-----|\n' +
-'| | | | | |\n\n' +
-'No qualifying PRs found at this time. Check back soon!\n\n' +
-'Last updated: ' + new Date().toUTCString();
-`;
+          const emptyIssueBody = `# 🏆 Hacktoberfest 2025 Goose Leaderboard 🏆
+Hello, lovely contributors! As Hacktoberfest 2025 and the crisp Fall breeze refreshes us, we wanted to make the contribution process extra fun. Check our live leaderboard below to see who our top contributors are this year in real-time. Not only does this recognize everyone's efforts, it also brings an amplified competitive vibe with each contribution.
+
+### 🌟 **Current Rankings:**
+
+| Rank | Contributor | Points | PRs | Biggest PR to Date |
+|------|-------------|--------|-----|-------------------|
+| | | | | |
+
+No qualifying PRs found at this time. Check back soon!
+
+Last updated: ${new Date().toUTCString()}
             await github.rest.issues.update({
               owner,
               repo,
