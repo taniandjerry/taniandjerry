@@ -2,8 +2,8 @@ name: Update Hacktoberfest Leaderboard
 
 on:
   schedule:
-  # Run every hour during October
-    - cron: '*/5 * * 9 *'  # Runs every 5 minutes during September (for testing)
+  # Run every hour during October is the end goal
+    - cron: '0 * * 9 *'  # Runs every hour at the top of the hour during September (for testing)
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
