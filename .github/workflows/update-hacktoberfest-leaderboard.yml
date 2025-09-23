@@ -164,7 +164,9 @@ jobs:
               `| 🐰 **Medium** | 10 points | For average tasks that take additional time to complete and/or require some product knowledge. |\n` +
               `| 🐂 **Large** | 15 points | For heavy tasks that takes lots of time to complete and/or possibly require deep product knowledge. |\n\n` +
               `#### 🎁 Rewards\n` +
-              `- Made it to the **top 10**? Our Top 10 Contributors with the most points will be awarded gift cards to our brand new goose swag shop! Keep an eye on your progress to make sure you're one step ahead!\n\n` +
+              `- Made it to the **top 5**? Our Top 5 Contributors with the most points will be awarded $100 gift cards to our brand new goose swag shop and $100 of LLM credits!\n` +
+              `- Reached the top **6-10**? Our Top 6-10 Contributors with the most points will be awarded $50 gift cards to our brand new goose swag shop and $50 of LLM credits!\n` +
+              `- Landed in the top **11-20**? Our Top 11-20 Contributors with the most points will be awarded $25 of LLM credits! Keep an eye on your progress to make sure you're one step ahead!\n\n` +
               `### FAQ\n` +
               `- **Frequency of Updates:** The leaderboard will be updated every hour.\n` +
               `- **Criteria:** Rankings are based on how many points you earn across all approved PRs in the goose repo. To ensure your PRs are successfully merged:\n` +
