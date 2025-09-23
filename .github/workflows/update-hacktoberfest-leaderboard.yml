@@ -3,7 +3,7 @@ name: Update Hacktoberfest Leaderboard
 on:
   schedule:
   # Run every hour during October
-    - cron: '* * * 9 *'  # Runs every hour at the start of the hour during October
+    - cron: '*/5 * * 9 *'  # Runs every 5 minutes during September (for testing)
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
