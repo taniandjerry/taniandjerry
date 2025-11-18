@@ -1,4 +1,4 @@
-## Hiya, I'm Tania! Or @taniashiba 👋
+## Hiya, I'm Tania! Or @taniandjerry 👋
 
 ### 🤙🏽 More about me:
 I am a Technical Community Builder and Strategist that loves to help others connect! Thank you for being here.
@@ -10,7 +10,7 @@ I am a Technical Community Builder and Strategist that loves to help others conn
 - ⚡ Fun fact: I have two cats named Milk & Cheese.
 
 ### 💭 Stats
-[![GitHub Streak](https://streak-stats.demolab.com/?user=taniashiba&theme=violet-punch)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=taniandjerry&theme=violet-punch)](https://git.io/streak-stats)
 
 ### ✍🏽 Recent blog posts:
 - [MCP Explained for Non-Developers](https://dev.to/blockopensource/mcp-explained-for-non-developers-2he6)
@@ -19,7 +19,7 @@ I am a Technical Community Builder and Strategist that loves to help others conn
 - [How Decentralized Apps Can Make Everyday Tasks Easy](https://dev.to/tbdevs/how-decentralized-apps-can-make-everyday-tasks-easy-o51)
 
 <!--
-**taniashiba/taniashiba** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**taniandjerry/taniandjerry** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
