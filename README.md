@@ -1,7 +1,7 @@
 ## Hiya, I'm Tania! Or @taniandjerry 👋
 
 ### 🤙🏽 More about me:
-I am a Technical Community Builder and Strategist that loves to help others connect! Thank you for being here.
+I am a technical community manager and strategist that loves to help others connect! Thank you for being here.
 
 - 🔭 I’m currently working on building nurturing and growing open source communities at Block.
 - 🌱 I’m currently actively contributing to goose, with the help of goose, in my everyday!
