@@ -10,7 +10,7 @@ I am a technical community manager and strategist that loves to help others conn
 - ⚡ Fun fact: I have two cats named Milk & Cheese.
 
 ### 💭 Stats
-[![GitHub Streak](https://streak-stats.demolab.com/?user=taniandjerry&theme=violet-punch)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=taniandjerry&theme=violet-punch)](https://github.com/taniandjerry)
 
 ### ✍🏽 Recent blog posts:
 - [MCP Explained for Non-Developers](https://dev.to/blockopensource/mcp-explained-for-non-developers-2he6)
