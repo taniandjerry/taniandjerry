@@ -1,31 +1,63 @@
 ## Hiya, I'm Tania! Or @taniandjerry 👋
 
-### 🤙🏽 More about me:
-I am a technical community manager and strategist that loves to help others connect! Thank you for being here.
+> **Version**: 2.0  
+> **Status**: Actively maintained by me + occasional keyboard contributions from Milk & Cheese
 
-- 🔭 I’m currently working on building nurturing and growing open source communities at Block.
-- 🌱 I’m currently actively contributing to goose, with the help of goose, in my everyday!
-- 💬 Ask me about community, AI workflows, content, events, and Godzilla.
-- 😄 Pronouns: she/her/hers
-- ⚡ Fun fact: I have two cats named Milk & Cheese.
+## 🎯 Overview
 
-### ✍🏽 Recent blog posts:
-- [MCP Explained for Non-Developers](https://dev.to/blockopensource/mcp-explained-for-non-developers-2he6)
+Hi! I'm a technical community manager and strategist at Block. This is my personal repo, which is my digital home on GitHub. Welcome! Make yourself comfy-cozy. 🫖
+
+## 🤙🏽 Core Features
+
+### Primary Functions:
+- **Community**: Specializes in nurturing and growing open source communities
+- **Creating fun (and hopefully funny) content**: Writes about community, tech, AI, and probably most definitely Godzilla
+- **Let's get goose'd!**: Daily contributor to [goose](https://github.com/block/goose) (with help from goose itself - very meta)
+- **Like a handy power cable**: Loves helping people connect with each other
+
+### Technical Specs:
+- **Pronouns**: she/her/hers
+- **Power Source**: Chai (required for optimal performance)
+- **Companion Units**: 
+  - Cats: Milk & Cheese (after the comic book)
+  - Reptiles: Chives (leopard gecko), Godzilla (crested gecko), Mashed Potato (micro gecko), Cheeto (house snake), Butter (rosy boa)
+
+## 🚀 Quick Start Guide
+
+### To Collaborate:
+1. Say hi! I'm friendly
+2. Talk about community or Godzilla (the gecko or the kaiju, both are valid tbh)
+3. Share what you're working on
+4. ???
+5. Profit (or at least have a good conversation)
+
+### Recent blogs:
+- [MCP Explained for Non-Developers](https://dev.to/blockopensource/mcp-explained-for-non-developers-2he6) 🆕
 - [Let A Team of AI Agents Do It For You](https://dev.to/blockopensource/let-a-team-of-ai-agents-do-it-for-you-268a)
 - [AI Agents Are Like Fish Tanks](https://dev.to/taniandjerry/ai-agents-are-like-fish-tanks-37d4)
 - [How Decentralized Apps Can Make Everyday Tasks Easy](https://dev.to/tbdevs/how-decentralized-apps-can-make-everyday-tasks-easy-o51)
 
+## 🛠️ Current Projects
+
+- 🪿 Contributing to [goose](https://github.com/block/goose)
+- 📝 Writing about tech and AI for non-developers
+- 🌱 Growing open source communities
+- 🎄 Participating in Advent of AI (you're seeing Day 3 results right now!)
+
+## 🐱 Dependencies
+
+This repo would not be possible without:
+- 🫖 Chai (critical dependency)
+- 🪿 Goose (daily driver)
+- 🐱 Milk & Cheese (quality assurance team)
+- 🦎 Chives, Godzilla, Mashed Potato, Cheeto & Butter (moral support team)
+- 🎮 GitHub Copilot (autocomplete wizard)
+
+---
+
+*Last updated: December 2025*   
+*Approved by: Milk & Cheese (via keyboard walking)*
+
 <!--
 **taniandjerry/taniandjerry** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
 -->
