@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goose Community Reports</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .card.github { border-top: 3px solid #6e5494; }
+        .card.social { border-top: 3px solid #1da1f2; }
+        .card.youtube { border-top: 3px solid #ff0000; }
+        .card.discord { border-top: 3px solid #5865f2; }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #666;
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🪿 Goose Community Reports</h1>
+            <p class="subtitle">Interactive dashboards tracking goose open source growth</p>
+        </header>
+        
+        <div class="cards">
+            <a href="github_growth_chart.html" class="card github">
+                <div class="card-icon">📊</div>
+                <h2>GitHub Growth</h2>
+                <p>Stars, contributors, commits, merged PRs, and releases over time</p>
+            </a>
+            
+            <a href="social_media_growth_chart.html" class="card social">
+                <div class="card-icon">📱</div>
+                <h2>Social Media Growth</h2>
+                <p>Follower counts across Twitter/X, Discord, YouTube, LinkedIn, and Bluesky</p>
+            </a>
+            
+            <a href="youtube_metrics_chart.html" class="card youtube">
+                <div class="card-icon">▶️</div>
+                <h2>YouTube Metrics</h2>
+                <p>Views, new viewers, subscribers, and watch hours trends</p>
+            </a>
+            
+            <a href="discord_metrics_chart.html" class="card discord">
+                <div class="card-icon">💬</div>
+                <h2>Discord Metrics</h2>
+                <p>Member totals, new members, and community activity</p>
+            </a>
+        </div>
+        
+        <footer>
+            <p>Built with 🪿 by the <a href="https://github.com/block/goose">goose</a> community team</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Metrics - 2025/2026</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .stat-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-width: 150px;
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .stat-value.views { color: #FF0000; }
+        .stat-value.viewers { color: #065FD4; }
+        .stat-value.subs { color: #43b581; }
+        .stat-value.hours { color: #FF9500; }
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        .growth {
+            color: #43b581;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>📺 YouTube Metrics - Jan 2025 to Jan 2026</h1>
+    
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-value views">352k</div>
+            <div class="stat-label">Total Views</div>
+            <div class="stat-label">(Jan 2025 - Jan 2026)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value viewers">114k</div>
+            <div class="stat-label">Total New Viewers</div>
+            <div class="stat-label">(Feb 2025 - Jan 2026)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value subs">6.46k</div>
+            <div class="stat-label">Subscribers (Jan 2026)</div>
+            <div class="growth">+487% from Feb 2025</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value hours">9,306</div>
+            <div class="stat-label">Total Watch Hours</div>
+            <div class="stat-label">(Jan 2025 - Jan 2026)</div>
+        </div>
+    </div>
+    
+    <!-- Original chart: Views, New Viewers, Subscribers -->
+    <div class="chart-container">
+        <canvas id="combinedChart" height="110"></canvas>
+    </div>
+    
+    <!-- Separate chart: Views & Watch Hours -->
+    <div class="chart-container">
+        <canvas id="viewsWatchHoursChart" height="90"></canvas>
+    </div>
+
+    <script>
+        const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan"];
+        const years = ["2025","2025","2025","2025","2025","2025","2025","2025","2025","2025","2025","2025","2026"];
+        const labels = months.map((m, i) => m + ' ' + years[i]);
+        const views = [null,40400,17700,20900,20600,36500,25900,26400,22000,26400,20900,31800,51900];
+        const newViewers = [null,3000,3000,1500,1400,1700,12400,11700,9900,12100,10300,15000,32400];
+        const subscribers = [null,1100,2200,2400,2800,3200,3700,4040,4270,4700,5064,5580,6460];
+        const watchHours = [324,1200,580,540,446,855,688,778,519,721,622,733,1300];
+
+        // Original combined chart: Views, New Viewers, Subscribers
+        new Chart(document.getElementById('combinedChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Total Views',
+                        data: views,
+                        backgroundColor: 'rgba(255, 0, 0, 0.7)',
+                        borderColor: 'rgba(255, 0, 0, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y',
+                        order: 3
+                    },
+                    {
+                        label: 'New Viewers',
+                        data: newViewers,
+                        type: 'line',
+                        borderColor: 'rgba(6, 95, 212, 1)',
+                        backgroundColor: 'rgba(6, 95, 212, 0.1)',
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 3,
+                        yAxisID: 'y',
+                        order: 2,
+                        spanGaps: true
+                    },
+                    {
+                        label: 'Subscribers',
+                        data: subscribers,
+                        type: 'line',
+                        borderColor: 'rgba(67, 181, 129, 1)',
+                        backgroundColor: 'rgba(67, 181, 129, 0.1)',
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 3,
+                        borderDash: [5, 5],
+                        yAxisID: 'y1',
+                        order: 1,
+                        spanGaps: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'YouTube Views, New Viewers & Subscribers',
+                        font: { size: 20 }
+                    },
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                if (ctx.raw === null) return ctx.dataset.label + ': N/A';
+                                if (ctx.raw >= 1000) {
+                                    return ctx.dataset.label + ': ' + (ctx.raw / 1000).toFixed(1) + 'k';
+                                }
+                                return ctx.dataset.label + ': ' + ctx.raw;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Views / New Viewers',
+                            font: { size: 14 }
+                        },
+                        min: 0,
+                        max: 55000,
+                        ticks: {
+                            callback: function(value) {
+                                return (value / 1000) + 'k';
+                            }
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Subscribers',
+                            color: 'rgba(67, 181, 129, 1)',
+                            font: { size: 14 }
+                        },
+                        min: 0,
+                        max: 7000,
+                        grid: {
+                            drawOnChartArea: false
+                        },
+                        ticks: {
+                            color: 'rgba(67, 181, 129, 1)',
+                            callback: function(value) {
+                                return (value / 1000).toFixed(1) + 'k';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // New chart: Views & Watch Hours
+        new Chart(document.getElementById('viewsWatchHoursChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Total Views',
+                        data: views,
+                        backgroundColor: 'rgba(255, 0, 0, 0.6)',
+                        borderColor: 'rgba(255, 0, 0, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y',
+                        order: 2
+                    },
+                    {
+                        label: 'Watch Hours',
+                        data: watchHours,
+                        type: 'line',
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        backgroundColor: 'rgba(255, 149, 0, 0.2)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
+                        borderWidth: 3,
+                        yAxisID: 'y1',
+                        order: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '⏱️ Views & Watch Hours',
+                        font: { size: 20 }
+                    },
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                if (ctx.raw === null) return ctx.dataset.label + ': N/A';
+                                if (ctx.dataset.label === 'Watch Hours') {
+                                    return ctx.dataset.label + ': ' + ctx.raw.toLocaleString() + ' hrs';
+                                }
+                                if (ctx.raw >= 1000) {
+                                    return ctx.dataset.label + ': ' + (ctx.raw / 1000).toFixed(1) + 'k';
+                                }
+                                return ctx.dataset.label + ': ' + ctx.raw;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Views',
+                            color: 'rgba(255, 0, 0, 1)',
+                            font: { size: 14 }
+                        },
+                        min: 0,
+                        max: 55000,
+                        ticks: {
+                            color: 'rgba(255, 0, 0, 0.8)',
+                            callback: function(value) {
+                                return (value / 1000) + 'k';
+                            }
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Watch Hours',
+                            color: 'rgba(255, 149, 0, 1)',
+                            font: { size: 14 }
+                        },
+                        min: 0,
+                        max: 1500,
+                        grid: {
+                            drawOnChartArea: false
+                        },
+                        ticks: {
+                            color: 'rgba(255, 149, 0, 1)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

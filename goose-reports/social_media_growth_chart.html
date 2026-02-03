@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>goose Social Media Growth - 2025/2026</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 16px;
+            padding: 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .chart-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            text-align: center;
+        }
+        .chart-header h1 {
+            color: white;
+            margin: 0 0 10px 0;
+            font-size: 2em;
+            font-weight: 600;
+        }
+        .chart-header p {
+            color: rgba(255,255,255,0.85);
+            margin: 0;
+            font-size: 1.1em;
+        }
+        .chart-header-small {
+            background: linear-gradient(135deg, #0A66C2 0%, #004182 100%);
+            padding: 20px;
+            text-align: center;
+        }
+        .chart-header-small h2 {
+            color: white;
+            margin: 0 0 5px 0;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .chart-header-small p {
+            color: rgba(255,255,255,0.85);
+            margin: 0;
+            font-size: 1em;
+        }
+        .chart-body {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <div class="chart-header">
+            <h1>goose Social Media Growth - Feb 2025 to Jan 2026</h1>
+            <p>Follower/Member counts across all social platforms</p>
+        </div>
+        <div class="chart-body">
+            <canvas id="socialChart" height="110"></canvas>
+        </div>
+    </div>
+    
+    <div class="chart-container">
+        <div class="chart-header-small">
+            <h2>LinkedIn Followers vs Newsletter Subscribers</h2>
+            <p>Comparing LinkedIn page growth with newsletter subscriber growth</p>
+        </div>
+        <div class="chart-body">
+            <canvas id="linkedinNewsletterChart" height="80"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const months = ["Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan"];
+        const years = ["2025","2025","2025","2025","2025","2025","2025","2025","2025","2025","2025","2026"];
+        const labels = months.map((m, i) => m + ' ' + years[i]);
+        
+        const twitter = [4050,4281,4393,4997,5640,8037,8815,8815,9264,9335,10000,10900];
+        const discord = [2700,3187,3314,3723,4042,4411,4433,4500,4641,4734,4800,5115];
+        const youtube = [1850,2260,2400,2820,3210,3730,4040,4270,4780,5064,5580,6460];
+        const linkedin = [807,1108,1199,1380,1553,1905,2115,2248,2604,2789,3400,3747];
+        const bluesky = [416,416,583,654,699,782,828,827,864,883,1000,1000];
+        const newsletter = [150,411,456,553,629,760,760,888,1027,1111,1050,1075];
+
+        // Main social media chart with 5 lines (no newsletter)
+        new Chart(document.getElementById('socialChart'), {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Twitter/X',
+                        data: twitter,
+                        borderColor: '#1DA1F2',
+                        backgroundColor: '#1DA1F2',
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 3
+                    },
+                    {
+                        label: 'Discord',
+                        data: discord,
+                        borderColor: '#5865F2',
+                        backgroundColor: '#5865F2',
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 3
+                    },
+                    {
+                        label: 'YouTube',
+                        data: youtube,
+                        borderColor: '#FF0000',
+                        backgroundColor: '#FF0000',
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 3
+                    },
+                    {
+                        label: 'LinkedIn',
+                        data: linkedin,
+                        borderColor: '#0A66C2',
+                        backgroundColor: '#0A66C2',
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 3
+                    },
+                    {
+                        label: 'Bluesky',
+                        data: bluesky,
+                        borderColor: '#0085FF',
+                        backgroundColor: '#0085FF',
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        borderWidth: 3
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            usePointStyle: true,
+                            pointStyle: 'circle',
+                            padding: 20,
+                            font: { size: 13 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                return ctx.dataset.label + ': ' + ctx.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 12000,
+                        title: {
+                            display: true,
+                            text: 'Followers/Members',
+                            font: { size: 13 }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value.toLocaleString();
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month',
+                            font: { size: 13 }
+                        }
+                    }
+                }
+            }
+        });
+
+        // LinkedIn vs Newsletter comparison chart - bars with line overlay
+        new Chart(document.getElementById('linkedinNewsletterChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'LinkedIn Followers',
+                        data: linkedin,
+                        backgroundColor: 'rgba(10, 102, 194, 0.7)',
+                        borderColor: '#0A66C2',
+                        borderWidth: 1,
+                        order: 2
+                    },
+                    {
+                        label: 'Newsletter Subscribers',
+                        data: newsletter,
+                        type: 'line',
+                        borderColor: '#057642',
+                        backgroundColor: '#057642',
+                        tension: 0.3,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
+                        borderWidth: 3,
+                        order: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20,
+                            font: { size: 13 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                return ctx.dataset.label + ': ' + ctx.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Count',
+                            font: { size: 13 }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value.toLocaleString();
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month',
+                            font: { size: 13 }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
