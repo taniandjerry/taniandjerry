@@ -22,16 +22,7 @@ Hi! I'm a technical community manager and strategist at Block. This is my person
   - Cats: Milk & Cheese (after the comic book)
   - Reptiles: Chives (leopard gecko), Godzilla (crested gecko), Mashed Potato (micro gecko), Cheeto (house snake), Butter (rosy boa)
 
-## 🚀 Quick Start Guide
-
-### To Collaborate:
-1. Say hi! I'm friendly
-2. Talk about community or Godzilla (the gecko or the kaiju, both are valid tbh)
-3. Share what you're working on
-4. ???
-5. Profit (or at least have a good conversation)
-
-### Recent blogs:
+## 🚀 Recent Blogs
 - [MCP Explained for Non-Developers](https://dev.to/blockopensource/mcp-explained-for-non-developers-2he6) 🆕
 - [Let A Team of AI Agents Do It For You](https://dev.to/blockopensource/let-a-team-of-ai-agents-do-it-for-you-268a)
 - [AI Agents Are Like Fish Tanks](https://dev.to/taniandjerry/ai-agents-are-like-fish-tanks-37d4)
