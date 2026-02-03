@@ -39,10 +39,8 @@ Hi! I'm a technical community manager and strategist at Block. This is my person
 
 This repo would not be possible without:
 - 🫖 Chai (critical dependency)
-- 🪿 Goose (daily driver)
 - 🐱 Milk & Cheese (quality assurance team)
-- 🦎 Chives, Godzilla, Mashed Potato, Cheeto & Butter (moral support team)
-- 🎮 GitHub Copilot (autocomplete wizard)
+- 🦎 Various dairy kids of the lizard and snake variety
 
 ---
 
