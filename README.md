@@ -43,6 +43,7 @@ Hi! I'm a technical community manager and strategist at Block. This is my person
 - 📝 Writing about tech and AI for non-developers
 - 🌱 Growing open source communities
 - 🎄 Participating in Advent of AI (you're seeing Day 3 results right now!)
+- 📊 **[Goose Community Reports](https://taniandjerry.github.io/taniandjerry/goose-reports/)** - Interactive dashboards tracking goose open source growth
 
 ## 🐱 Dependencies
 
@@ -55,7 +56,7 @@ This repo would not be possible without:
 
 ---
 
-*Last updated: December 2025*   
+*Last updated: February 2026*   
 *Approved by: Milk & Cheese (via keyboard walking)*
 
 <!--
