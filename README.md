@@ -32,8 +32,7 @@ Hi! I'm a technical community manager and strategist at Block. This is my person
 
 - 🪿 Contributing to [goose](https://github.com/block/goose)
 - 📝 Writing about tech and AI for non-developers
-- 🌱 Growing open source communities
-- 🎄 Participating in Advent of AI (you're seeing Day 3 results right now!)
+- 🎬 Creating content (for fun and work!)
 - 📊 **[Goose Community Reports](https://taniandjerry.github.io/taniandjerry/goose-reports/)** - Interactive dashboards tracking goose open source growth
 
 ## 🐱 Dependencies
