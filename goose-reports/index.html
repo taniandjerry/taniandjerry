@@ -12,7 +12,7 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: #000;
             min-height: 100vh;
             color: #fff;
             padding: 40px 20px;
@@ -28,13 +28,11 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ff2d95;
+            text-shadow: 0 0 10px #ff2d95, 0 0 20px #ff2d95, 0 0 40px #ff2d95;
         }
         .subtitle {
-            color: #a0a0a0;
+            color: #888;
             font-size: 1.1rem;
         }
         .cards {
@@ -44,8 +42,8 @@
             margin-top: 30px;
         }
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #111;
+            border: 1px solid #333;
             border-radius: 16px;
             padding: 30px;
             text-decoration: none;
@@ -56,9 +54,9 @@
         }
         .card:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: #1a1a1a;
+            border-color: #ff2d95;
+            box-shadow: 0 0 20px rgba(255, 45, 149, 0.4), 0 20px 40px rgba(0, 0, 0, 0.5);
         }
         .card-icon {
             font-size: 2.5rem;
@@ -67,26 +65,31 @@
         .card h2 {
             font-size: 1.3rem;
             margin-bottom: 10px;
+            color: #ff2d95;
         }
         .card p {
-            color: #a0a0a0;
+            color: #888;
             font-size: 0.9rem;
             line-height: 1.5;
         }
-        .card.github { border-top: 3px solid #6e5494; }
-        .card.social { border-top: 3px solid #1da1f2; }
-        .card.youtube { border-top: 3px solid #ff0000; }
-        .card.discord { border-top: 3px solid #5865f2; }
+        .card.github { border-top: 3px solid #ff2d95; }
+        .card.social { border-top: 3px solid #ff2d95; }
+        .card.youtube { border-top: 3px solid #ff2d95; }
+        .card.discord { border-top: 3px solid #ff2d95; }
         
         footer {
             text-align: center;
             margin-top: 60px;
-            color: #666;
+            color: #555;
             font-size: 0.85rem;
         }
         footer a {
-            color: #667eea;
+            color: #ff2d95;
             text-decoration: none;
+            transition: text-shadow 0.3s ease;
+        }
+        footer a:hover {
+            text-shadow: 0 0 10px #ff2d95;
         }
     </style>
 </head>
