@@ -1,4 +1,4 @@
-## Hiya, I'm Tania! Or @taniandjerry 👋
+## Hiya, I'm Tania! Or @taniacryptid 👋
 
 > **Version**: 2.0  
 > **Status**: Actively maintained by me + occasional keyboard contributions from Milk & Cheese
@@ -25,7 +25,7 @@ Hi! I'm a technical community manager and strategist at Block. This is my person
 ## ✍️ Recent Blogs
 - [MCP Explained for Non-Developers](https://dev.to/blockopensource/mcp-explained-for-non-developers-2he6) 🆕
 - [Let A Team of AI Agents Do It For You](https://dev.to/blockopensource/let-a-team-of-ai-agents-do-it-for-you-268a)
-- [AI Agents Are Like Fish Tanks](https://dev.to/taniandjerry/ai-agents-are-like-fish-tanks-37d4)
+- [AI Agents Are Like Fish Tanks](https://dev.to/taniacryptid/ai-agents-are-like-fish-tanks-37d4)
 - [How Decentralized Apps Can Make Everyday Tasks Easy](https://dev.to/tbdevs/how-decentralized-apps-can-make-everyday-tasks-easy-o51)
 
 ## 🛠️ Current Projects
@@ -33,7 +33,7 @@ Hi! I'm a technical community manager and strategist at Block. This is my person
 - 🪿 Contributing to [goose](https://github.com/block/goose)
 - 📝 Writing about tech and AI for non-developers
 - 🎬 Creating content (for fun and work!)
-- 📊 **[Goose Community Reports](https://taniandjerry.github.io/taniandjerry/goose-reports/)** - Interactive dashboards tracking goose open source growth
+- 📊 **[Goose Community Reports](https://taniacryptid.github.io/taniandjerry/goose-reports/)** - Interactive dashboards tracking goose open source growth
 
 ## 🐱 Dependencies
 
