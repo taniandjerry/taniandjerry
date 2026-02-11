@@ -5,7 +5,7 @@
 
 ## 🎯 Overview
 
-Hi! I'm a technical community manager and strategist at Block. This is my personal repo, which is my digital home on GitHub. Welcome! Make yourself comfy-cozy. 🫖
+Hi! I'm Senior Technical Community Manager at Block, for Block Open Source. This is my personal repo, which is my digital home on GitHub. Welcome! Make yourself comfy-cozy. 🫖
 
 ## 🤙🏽 Core Features
 
