@@ -33,7 +33,7 @@ Hi! I'm Senior Technical Community Manager at Block, for Block Open Source. This
 - 🪿 Contributing to [goose](https://github.com/block/goose)
 - 📝 Writing about tech and AI for non-developers
 - 🎬 Creating content (for fun and work!)
-- 📊 **[Goose Community Reports](https://taniacryptid.github.io/taniandjerry/goose-reports/)** - Interactive dashboards tracking goose open source growth
+- 📊 **[Goose Community Reports](https://taniacryptid.github.io/taniacryptid/goose-reports/)** - Interactive dashboards tracking goose open source growth
 
 ## 🐱 Dependencies
 
